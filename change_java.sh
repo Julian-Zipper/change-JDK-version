@@ -11,10 +11,12 @@ elevate = /d/projects/scripts/elevate.bat;
 
 case $1 in
 	11 )
-		echo "Updating JAVA_HOME and PATH for jdk-11";
+		echo "Updating JAVA_HOME and PATH to jdk-$1";
+		elevate ./jdk-11.bat;
 		;;
 	16 )
-		echo "Updating JAVA_HOME and PATH for jdk-11";
+		echo "Updating JAVA_HOME and PATH to jdk-$1";
+		elevate ./jdk-16.bat;
 		;;
 	* )
 		echo "Not a valid Java version. Installed jdks are (11, 16)";
@@ -22,5 +24,5 @@ case $1 in
 		;;
 esac
 
-echo "Updated to jdk-$1";
+echo "Succesfuly switched to jdk-$1";
 echo "Closing...";
