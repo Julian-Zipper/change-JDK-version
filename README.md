@@ -1,16 +1,20 @@
 # Change JDK automatically :factory:
-Because manually switching between JDK versions (on windows) should really be less sluggish :snail:
+`change_java 11` is all that's needed. Why? Because manually switching between JDK versions (on windows) should really just be less time-consuming. :snail:
 
-There's still some manual work involved; for each JDK the correct installation folder must be added to the case statement in this bash script.
-
-### Usage instractions :microscope: 
-1. Simply call the script with an installed JDK version number: `change_java 11`
-2. A CMD elevation prompt will pop up, accept it
-3. Ta-Da!
+There's still some manual work involved; for each JDK the correct installation folder must be added to the script.
 
 ### 1st time use :blue_book:
-- Add an alias for the script to your .bashrc or equivalent (i'm using **Git for Windows**): `alias change_java='/d/PATH_TO_PROJECT/change-JDK-version/change_java.sh'`, which allows you to simply call F.E. `change_java 11` from your console/terminal.
+- Add an alias for the script to your .bashrc or equivalent (i'm using **Git for Windows**):
+`alias change_java='/d/PATH_TO_PROJECT/change-JDK-version/change_java.sh'`
+this allows you to simply call the script from your console/terminal:
+`change_java 11`
+........
 - Add each JDK you have installed to the case statement. See [Installing other JDKS](#Installing-other-JDKS)
+
+### Usage instractions :microscope: 
+1. Simply call the script with an installed JDK version number, F.E.: `change_java 11`
+2. A CMD elevation prompt will pop up, accept it
+3. Ta-Da!
 
 ### Installing other JDKs :hammer: 
 1. To add another JDK version to the script, first add its version number to the case statement. For example, if adding Java 11, it'll look like this:
