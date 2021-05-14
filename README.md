@@ -1,7 +1,7 @@
 # Change JDK automatically :factory:
 `change_java 11` is all that's needed.
 
-# Why is this necessary?
+### Why is this necessary?
 Because manually switching between JDK versions (on windows) should really just be less time-consuming. :snail:
 
 Noone likes spending too much time in windows registry/environment variables (i hope). Or looking up JDK installation folders every time you'd need to switch. Okay, yeah, there's still some manual work involved - for each JDK the correct installation folder must be added to the script. But it's less time consuming than the alternative.
