@@ -1,11 +1,14 @@
 @echo off
-:: if not %1=="am_admin" (powershell start -verb runas '%0' 'am_admin "%~1"' & exit)
+
+echo "Batch script got elevation now, argument used is:"
 
 :: Run this script with elevation
 call :RequestAdminElevation "%~dpfs0" %* || goto:eof
 
 :: Code to run after attaining elevation
-setx -m JAVA_HOME "D:\Program Files\Java\jdk11.0.11"
+echo "Batch script got elevation now, argument used is:"
+echo %1
+setx -m "E:\Program Files\Java\jdk-11.0.11"
 setx -m PATH "%PATH%;%JAVA_HOME%\bin"
 
 goto:eof

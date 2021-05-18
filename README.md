@@ -11,7 +11,7 @@ Noone likes spending too much time in windows registry/environment variables (i 
 `alias change_java='/d/PATH_TO_PROJECT/change-JDK-version/change_java.sh'`
 this allows you to simply call the script from your console/terminal:
 `change_java 11`
-........
+- Add `%JAVA_HOME%\bin` to your PATH [How-to](https://www.webucator.com/how-to/how-set-path-from-java_home.cfm)
 - Add each JDK you have installed to the case statement. See [Installing other JDKS](#Installing-other-JDKS)
 
 ### Usage instractions :microscope: 
