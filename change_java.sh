@@ -10,9 +10,9 @@ fi
 # define a fuction to call the powershell script used to change JDK in registry
 # Requires an argument - the path to the JDK installation folder
 set_jdk_to () {
-	./change_jdk.bat $1
-
-	echo "Batch script finished updating JAVA_HOME and PATH";
+	./change_jdk.bat $1;
+	
+	echo "Batch script finished updating JAVA_HOME";
 	echo "Succesfuly switched JDK to $1";
 }
 
@@ -20,14 +20,20 @@ set_jdk_to () {
 # - use a script to open an elevated powershell prompt to modify env variables
 # - call the corresponding batch script to update the Java env variables
 case $1 in
-	11 )
-		set_jdk_to '"D:\Program Files\Java\jdk-11.0.11"'
+	8 )
+		set_jdk_to "E:\Program Files\Java\jdk1.8.0_144";
 		;;
-	16 )
-		set_jdk_to '"D:\Program Files\Java\jdk-16.0.1"'
+	11 )
+		set_jdk_to "E:\Program Files\Java\jdk-11.0.11";
+		;;
+	13 )
+		set_jdk_to "E:\Program Files\Java\jdk-13.0.2";
+		;;
+	15 )
+		set_jdk_to "E:\Program Files\Java\jdk-15.0.2";
 		;;
 	* )
-		echo "Not a valid Java version. Installed jdks are (11, 16)";
+		echo "Not a valid Java version. Installed jdks are (8, 11, 13, 15)";
 		exit 1;
 		;;
 esac
