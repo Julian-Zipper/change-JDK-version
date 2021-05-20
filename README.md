@@ -5,6 +5,7 @@ one console/terminal command is all that's needed.
 1. Simply call the script with an installed JDK version number, F.E.: `change_java 11`
 2. A CMD elevation prompt will pop up, accept it
 3. Ta-Da!
+4. Oh, also, restart your console/terminal (if you plan on using java commands). `java` still points to the JDK from when the console/terminal was first opened. You can use `which java` to check the version used by the current session.
 
 ### Why is this necessary?
 Because manually switching between JDK versions (on windows) should really just be less time-consuming.

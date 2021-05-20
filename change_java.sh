@@ -10,6 +10,7 @@ fi
 # define a fuction to call the .batch script used to change JDK in registry
 # Requires an argument - the path to the JDK installation folder
 set_jdk () {
+	cd $(dirname "$0");
 	./change_jdk.bat $1;
 	
 	echo "Batch script finished updating JAVA_HOME";
